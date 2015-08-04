@@ -48,12 +48,12 @@ module RubySimplex
     tableau[idx_pivot_line(tableau)][idx_pivot_col(tableau)]
   end
 
-  def linha_pivot_atual(tableau)
+  def linha_que_sai(tableau)
     tableau[idx_pivot_line(tableau)]
   end
 
   def nova_linha_pivot(tableau)
-    vector_scalar_product( linha_pivot_atual(tableau), 1.0/pivot_value(tableau))
+    vector_scalar_product( linha_que_sai(tableau), 1.0/pivot_value(tableau))
   end
 
   def vector_sum(v1, v2)
